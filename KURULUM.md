@@ -6,6 +6,10 @@ Bu sürüm şu an kullandığın BL-105 uygulamasından tamamen ayrıdır. Ona d
 - `index.html`: Uygulamanın sayfası.
 - `app.js`: Girişler, şoför ekranı, kahya ekranı ve sahip paneli.
 - `ayar.js`: Sefer hesabı ve durak ayarlarının düzeni.
+- `carpi.js`: Çarpı hesabı. GPS raporu (PDF) ya da elle girilen gecikmelerle çalışır.
+- `harita.js`: Durak haritası. Durak konumları ve canlı araçlar burada görünür.
+- `ogren.js`: Trafik öğrenen sistem. Şoförlerin telefon konumundan gerçek durak-arası süreleri öğrenir, ortanca süreyi tahmin olarak kullanır.
+- `yolcu.html`: Yolcu sayfası. Adresi `yolcu.html?d=DURAKKODU`, QR afişleri için sonuna `&qr` eklenir.
 - `config.js`: **Sadece bunu doldurursun.** İçine Firebase bilgileri ve senin e-postan yazılır.
 - `firestore.rules`: Güvenlik kuralları. Her durak yalnızca kendi verisini görür.
 - `ornek-ayar-BL105.json`: Örnek ayar. Kahya ekranında "Ayarları yapıştır" ile yüklenebilir.
@@ -33,6 +37,17 @@ Daha sonra Google Play ve App Store'a da bu dosyalar paketlenecek.
 5. Şoförler **Şoför girişi** ile girer.
    - Durak kodunu ve plakasını yazıp onay ister.
    - Kahya, **📱 Telefonlar** bölümünden onaylar.
+
+## Güvenlik kurallarını güncellemek
+`firestore.rules` dosyası her değiştiğinde içeriğini Firebase'de **Firestore → Rules** sekmesine yapıştırıp **Publish**'e bas.
+
+> **Önemli (trafik öğrenen sistem):** Bu sürümle `firestore.rules` dosyasına `ogren` bölümü eklendi. Daha önce kurulmuş bir Firebase projesinde **kuralları yeniden Publish et**. Yapmazsan uygulama bozulmaz ama süreler öğrenilmez, yolcu sayfası plana göre çalışmaya devam eder.
+
+## Trafik öğrenen sistem
+- Şoförün telefonu takipteyken durak konumundan geçişleri algılar (120 m girişte, 150 m çıkışta). Durak konumları kahyanın haritada işaretlediği konumlardır (**Durak haritası**). İşaretsiz durakta öğrenme olmaz.
+- Süreler her hat için `duraklar/KOD/ogren/HATKODU` belgesinde ortak toplanır. Hafta içi ve hafta sonu (Cumartesi+Pazar) ayrı tutulur.
+- Bir durak arası için en az 5 örnek birikince ortanca süre kullanılır. Yetmezse sefer planı kullanılır.
+- Yolcu sayfası öğrenilmiş süreleri kullanır. Şoför ekranında TomTom anahtarı varsa sıra: öğrenilmiş süre, TomTom, plan.
 
 ## Durak ayarlarını hazır yazdırmak
 Durağın bilgilerini Claude'a anlat: hatlar, gün türleri, sefer saatleri ve aralıkları, duraklar ve dakikaları, uzatmalar, araç türleri, çarpı kuralı.

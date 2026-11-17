@@ -1,5 +1,5 @@
 {
- "surum": 1,
+ "surum": 2,
  "durakAdi": "BL-105",
  "konumDk": 5,
  "gunTurleri": [
@@ -83,47 +83,83 @@
    "duraklar": [
     {
      "ad": "Doğan Gıda",
-     "dk": 4
+     "dk": 4,
+     "gps": "Doğan G|Dogan G"
     },
     {
      "ad": "Makro Çarşı",
-     "dk": 7
+     "dk": 7,
+     "gps": "Macro"
     },
     {
      "ad": "Denizgören",
-     "dk": 12
+     "dk": 12,
+     "gps": "TaksiDu|TaksiDurağı"
+    },
+    {
+     "ad": "Moroğlu",
+     "dk": 16,
+     "sadece": [
+      [
+       "08:00",
+       "09:00"
+      ],
+      [
+       "15:30",
+       "16:30"
+      ]
+     ],
+     "gps": "Moroğlu|Morolu"
     },
     {
      "ad": "Balıkçı",
-     "dk": 18
+     "dk": 18,
+     "haric": [
+      [
+       "08:00",
+       "09:00"
+      ],
+      [
+       "15:30",
+       "16:30"
+      ]
+     ],
+     "gps": "Balıkçı|Balikci"
     },
     {
      "ad": "Metrobüs",
-     "dk": 30
+     "dk": 30,
+     "gps": "Metrob"
     },
     {
      "ad": "TÜYAP",
-     "dk": 35
+     "dk": 35,
+     "gps": "Tüyap2|Tuyap2"
     },
     {
      "ad": "Çekmece",
-     "dk": 43
+     "dk": 43,
+     "gps": "Atirus2"
     },
     {
      "ad": "Mimar Sinan",
-     "dk": 49
+     "dk": 49,
+     "gps": "Eczane2"
     },
     {
      "ad": "Meydan",
-     "dk": 55
+     "dk": 55,
+     "gps": "TaksiDu|TaksiDurağı2"
     },
     {
      "ad": "Makro",
-     "dk": 60
+     "dk": 60,
+     "gps": "Macro2"
     },
     {
      "ad": "Atrium",
-     "dk": 65
+     "dk": 65,
+     "gps": "Atrium"
     }
    ],
    "tarife": {
@@ -289,6 +325,317 @@
       "Makro": 5,
       "Atrium": 6
      }
+    },
+    {
+     "gunTurleri": [],
+     "haftaGunleri": [
+      5
+     ],
+     "bas": "12:00",
+     "bit": "23:59",
+     "ek": {
+      "Denizgören": 1,
+      "Metrobüs": 0,
+      "Makro": 1,
+      "Atrium": 1
+     }
+    }
+   ],
+   "otoTur": {
+    "tur": "nobetci",
+    "adet": 7,
+    "kalan": "dokuzcu",
+    "haric": [
+     "takviye"
+    ],
+    "mevsim": {
+     "yaz": 8
+    }
+   },
+   "yonler": {
+    "g": "TÜYAP yönü",
+    "d": "Atrium yönü"
+   },
+   "yolcuDuraklari": [
+    {
+     "ad": "Fatih Market",
+     "dk": 0,
+     "yon": "g"
+    },
+    {
+     "ad": "Güzelce Yol Ağzı",
+     "dk": 0.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Billur Caddesi",
+     "dk": 1,
+     "yon": "g"
+    },
+    {
+     "ad": "Çarmıklı Caddesi",
+     "dk": 1.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Atrium Çarşı",
+     "dk": 2.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Anaokulu (Doğan Gıda)",
+     "dk": 4,
+     "yon": "g"
+    },
+    {
+     "ad": "Villalar",
+     "dk": 4.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Sahil Tepe Villaları",
+     "dk": 5,
+     "yon": "g"
+    },
+    {
+     "ad": "Sinanoba",
+     "dk": 6,
+     "yon": "g"
+    },
+    {
+     "ad": "Makro Çarşı",
+     "dk": 7,
+     "yon": "g"
+    },
+    {
+     "ad": "Mimar Sinan Konakları",
+     "dk": 8,
+     "yon": "g"
+    },
+    {
+     "ad": "Mimaroba Muhtarlık",
+     "dk": 8.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Oba",
+     "dk": 9.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Dr. Sadık Ahmet İlkokulu",
+     "dk": 10.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Mustafa Kemal Paşa Bulvarı (Meydan)",
+     "dk": 12,
+     "yon": "g"
+    },
+    {
+     "ad": "Denizgören",
+     "dk": 13,
+     "yon": "g"
+    },
+    {
+     "ad": "Piri Reis Caddesi",
+     "dk": 14.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Siteler (Moroğlu)",
+     "dk": 16,
+     "yon": "g"
+    },
+    {
+     "ad": "İnönü Caddesi",
+     "dk": 16,
+     "yon": "g"
+    },
+    {
+     "ad": "Güzelsu",
+     "dk": 17,
+     "yon": "g"
+    },
+    {
+     "ad": "Doç. Dr. Burhan Bahriyeli Lisesi",
+     "dk": 17.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Mimar Sinan Belediye (Balıkçı)",
+     "dk": 18,
+     "yon": "g"
+    },
+    {
+     "ad": "Eczane",
+     "dk": 20,
+     "yon": "g"
+    },
+    {
+     "ad": "Büyükçekmece Atirus",
+     "dk": 21,
+     "yon": "g"
+    },
+    {
+     "ad": "Büyükçekmece İŞKUR",
+     "dk": 22,
+     "yon": "g"
+    },
+    {
+     "ad": "Fatih Mahallesi",
+     "dk": 23,
+     "yon": "g"
+    },
+    {
+     "ad": "Tabya 1",
+     "dk": 25,
+     "yon": "g"
+    },
+    {
+     "ad": "Tabya 2",
+     "dk": 27,
+     "yon": "g"
+    },
+    {
+     "ad": "Metrobüs",
+     "dk": 30,
+     "yon": "g"
+    },
+    {
+     "ad": "TÜYAP",
+     "dk": 35,
+     "yon": "d"
+    },
+    {
+     "ad": "Doğa Koleji",
+     "dk": 37,
+     "yon": "d"
+    },
+    {
+     "ad": "Çekmece",
+     "dk": 43,
+     "yon": "d"
+    },
+    {
+     "ad": "Eczane",
+     "dk": 45,
+     "yon": "d"
+    },
+    {
+     "ad": "Mimar Sinan Karayolları",
+     "dk": 47,
+     "yon": "d"
+    },
+    {
+     "ad": "Mimar Sinan Camii",
+     "dk": 48.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Balıkçılar (Mimar Sinan)",
+     "dk": 49,
+     "yon": "d"
+    },
+    {
+     "ad": "Doç. Dr. Burhan Bahriyeli Lisesi",
+     "dk": 50.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Güzelsu",
+     "dk": 51.5,
+     "yon": "d"
+    },
+    {
+     "ad": "İnönü Caddesi",
+     "dk": 52.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Siteler (Moroğlu)",
+     "dk": 53,
+     "yon": "d"
+    },
+    {
+     "ad": "Piri Reis Caddesi",
+     "dk": 53.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Denizgören",
+     "dk": 55,
+     "yon": "d"
+    },
+    {
+     "ad": "Mustafa Kemal Paşa Bulvarı (Meydan)",
+     "dk": 56,
+     "yon": "d"
+    },
+    {
+     "ad": "Dr. Sadık Ahmet İlkokulu",
+     "dk": 57,
+     "yon": "d"
+    },
+    {
+     "ad": "Oba",
+     "dk": 57.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Mimaroba Muhtarlık",
+     "dk": 58.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Mimar Sinan Konakları",
+     "dk": 59,
+     "yon": "d"
+    },
+    {
+     "ad": "Makro Çarşı",
+     "dk": 60,
+     "yon": "d"
+    },
+    {
+     "ad": "Sinanoba",
+     "dk": 61,
+     "yon": "d"
+    },
+    {
+     "ad": "Sahil Tepe Villaları",
+     "dk": 62,
+     "yon": "d"
+    },
+    {
+     "ad": "Villalar",
+     "dk": 62.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Anaokulu (Doğan Gıda)",
+     "dk": 63.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Atrium Çarşı",
+     "dk": 65,
+     "yon": "d"
+    },
+    {
+     "ad": "Çarmıklı Caddesi",
+     "dk": 66,
+     "yon": "d"
+    },
+    {
+     "ad": "Billur Caddesi",
+     "dk": 67,
+     "yon": "d"
+    },
+    {
+     "ad": "Güzelce Yol Ağzı",
+     "dk": 68.5,
+     "yon": "d"
     }
    ]
   },
@@ -314,31 +661,38 @@
    "duraklar": [
     {
      "ad": "Göbek",
-     "dk": 3
+     "dk": 3,
+     "gps": "Pınar S|Pinar S"
     },
     {
      "ad": "Kiptaş",
-     "dk": 5
+     "dk": 5,
+     "gps": "Kiptaş|Kiptas"
     },
     {
      "ad": "Akbelde",
-     "dk": 8
+     "dk": 8,
+     "gps": "Akbelde"
     },
     {
      "ad": "Metrobüs",
-     "dk": 27
+     "dk": 27,
+     "gps": "Metrob"
     },
     {
      "ad": "TÜYAP",
-     "dk": 32
+     "dk": 32,
+     "gps": "Tüyap2|Tuyap2"
     },
     {
      "ad": "Çekmece",
-     "dk": 40
+     "dk": 40,
+     "gps": "Atirus2"
     },
     {
      "ad": "Hastane",
-     "dk": 45
+     "dk": 45,
+     "gps": "Hastane"
     }
    ],
    "tarife": {
@@ -411,13 +765,189 @@
      ]
     }
    },
-   "uzatmalar": []
+   "uzatmalar": [],
+   "yonler": {
+    "g": "Metrobüs yönü",
+    "d": "Muratçeşme yönü"
+   },
+   "yolcuDuraklari": [
+    {
+     "ad": "Muratçeşme",
+     "dk": 0,
+     "yon": "g"
+    },
+    {
+     "ad": "Muratçeşme Sağlık Ocağı",
+     "dk": 1.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Hünkartepe Caddesi",
+     "dk": 2.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Göbek (Pınar Sokak)",
+     "dk": 3,
+     "yon": "g"
+    },
+    {
+     "ad": "Yunus Emre Caddesi",
+     "dk": 4,
+     "yon": "g"
+    },
+    {
+     "ad": "Mimar Sinan Kiptaş",
+     "dk": 5,
+     "yon": "g"
+    },
+    {
+     "ad": "Dizdariye Caddesi",
+     "dk": 6.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Pir Sultan Sokak",
+     "dk": 7,
+     "yon": "g"
+    },
+    {
+     "ad": "Akkent",
+     "dk": 7.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Akbelde",
+     "dk": 8,
+     "yon": "g"
+    },
+    {
+     "ad": "Mimar Sinan Devlet Hastanesi",
+     "dk": 10,
+     "yon": "g"
+    },
+    {
+     "ad": "Mimar Sinan Belediye (Balıkçı)",
+     "dk": 14,
+     "yon": "g"
+    },
+    {
+     "ad": "Eczane",
+     "dk": 16,
+     "yon": "g"
+    },
+    {
+     "ad": "Büyükçekmece Atirus",
+     "dk": 17,
+     "yon": "g"
+    },
+    {
+     "ad": "Büyükçekmece İŞKUR",
+     "dk": 18,
+     "yon": "g"
+    },
+    {
+     "ad": "Fatih Mahallesi",
+     "dk": 19,
+     "yon": "g"
+    },
+    {
+     "ad": "Tabya 1",
+     "dk": 20.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Tabya 2",
+     "dk": 22.5,
+     "yon": "g"
+    },
+    {
+     "ad": "Metrobüs",
+     "dk": 25,
+     "yon": "g"
+    },
+    {
+     "ad": "TÜYAP",
+     "dk": 32,
+     "yon": "d"
+    },
+    {
+     "ad": "Çekmece",
+     "dk": 40,
+     "yon": "d"
+    },
+    {
+     "ad": "Eczane",
+     "dk": 42,
+     "yon": "d"
+    },
+    {
+     "ad": "Akçimento",
+     "dk": 44,
+     "yon": "d"
+    },
+    {
+     "ad": "Mimar Sinan Devlet Hastanesi",
+     "dk": 45,
+     "yon": "d"
+    },
+    {
+     "ad": "Akbelde",
+     "dk": 47,
+     "yon": "d"
+    },
+    {
+     "ad": "Akkent",
+     "dk": 47.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Pir Sultan Sokak",
+     "dk": 48,
+     "yon": "d"
+    },
+    {
+     "ad": "Dizdariye Caddesi",
+     "dk": 48.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Mimar Sinan Kiptaş",
+     "dk": 50,
+     "yon": "d"
+    },
+    {
+     "ad": "Yunus Emre Caddesi",
+     "dk": 51,
+     "yon": "d"
+    },
+    {
+     "ad": "Göbek (Pınar Sokak)",
+     "dk": 52,
+     "yon": "d"
+    },
+    {
+     "ad": "Hünkartepe Caddesi",
+     "dk": 52.5,
+     "yon": "d"
+    },
+    {
+     "ad": "Muratçeşme Sağlık Ocağı",
+     "dk": 53.5,
+     "yon": "d"
+    }
+   ]
   }
  ],
  "carpi": {
-  "tur": "sefer",
-  "ucret": 0,
-  "tolerans": 0,
-  "not": ""
- }
+  "tur": "havuz",
+  "ucret": 500,
+  "ilkUcret": 700,
+  "tolerans": 10,
+  "enFazla": 60,
+  "kime": "arka",
+  "bolum": "Hat\\s*No\\s*:",
+  "not": "Metrobüs çarpıya sayılmıyor."
+ },
+ "tomtom": ""
 }

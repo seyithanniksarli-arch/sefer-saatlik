@@ -23,8 +23,9 @@ service cloud.firestore {
     }
 
     match /duraklar/{d} {
-      // Durağın adı ve ayarları: giriş yapan herkes okur (şoför durak kodunu doğrulamak için), sadece kahya/sahip yazar
-      allow read: if girisli();
+      // Durağın adı, ayarları ve durak konumları: herkes okur (yolcu sayfası için), sadece kahya/sahip yazar
+      allow get: if true;
+      allow list: if girisli();
       allow create, delete: if sahip();
       allow update: if yonetici(d);
 
@@ -46,6 +47,14 @@ service cloud.firestore {
         allow write: if yonetici(d);
       }
 
+      // Şoförlerin "sıradan çıktım / sıraya girdim" kayıtları: şoför sadece kendi plakasını değiştirebilir
+      match /sira/{tarih} {
+        allow read: if yetkili(d);
+        allow write: if yonetici(d) || (onayli(d) && (resource == null
+          ? request.resource.data.keys().hasOnly([get(cihaz(d)).data.plaka])
+          : request.resource.data.diff(resource.data).affectedKeys().hasOnly([get(cihaz(d)).data.plaka])));
+      }
+
       // Plaka kilidi (bir plakayı aynı anda tek telefon takip eder)
       match /takip/{plaka} {
         allow read, write: if yetkili(d);
@@ -55,6 +64,14 @@ service cloud.firestore {
       match /canli/{plaka} {
         allow read: if true;
         allow write: if yetkili(d);
+      }
+
+      // Trafik öğrenme havuzu (hat başına bir belge): durağın bütün şoförlerinin gerçek durak-arası süreleri.
+      // Yolcu sayfası okur, onaylı şoför telefonları (ve kahya/sahip) yazar. Her durak yalnızca kendi havuzunu görür/yazar.
+      match /ogren/{hat} {
+        allow read: if true;
+        allow create, update: if yetkili(d) && request.resource.data.keys().hasOnly(['s']);
+        allow delete: if yonetici(d);
       }
 
       // Yolcu sayfası için yayımlanan sefer planı

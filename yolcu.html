@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minibüs Nerede?</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2314a467'/%3E%3Cstop offset='.55' stop-color='%230f8a57'/%3E%3Cstop offset='1' stop-color='%2316507e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='116' fill='url%28%23g%29'/%3E%3Cellipse cx='256' cy='430' rx='120' ry='26' fill='%2310202e' opacity='.25'/%3E%3Cpath d='M256 74c-92 0-160 68-160 156 0 108 160 214 160 214s160-106 160-214c0-88-68-156-160-156z' fill='%23fff'/%3E%3Cg transform='translate%28160 150%29'%3E%3Crect x='10' y='0' width='172' height='150' rx='34' fill='%230f8a57'/%3E%3Crect x='30' y='20' width='132' height='62' rx='12' fill='%23e6f6ee'/%3E%3Crect x='30' y='98' width='30' height='18' rx='9' fill='%23ffcf33'/%3E%3Crect x='132' y='98' width='30' height='18' rx='9' fill='%23ffcf33'/%3E%3Crect x='34' y='146' width='30' height='26' rx='8' fill='%2310202e'/%3E%3Crect x='128' y='146' width='30' height='26' rx='8' fill='%2310202e'/%3E%3C/g%3E%3Cg transform='translate%28392 118%29'%3E%3Ccircle r='54' fill='%23e74c3c' stroke='%23fff' stroke-width='12'/%3E%3Ccircle r='18' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-title" content="Minibüs Nerede?">
+<meta name="theme-color" content="#0f8a57">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--yesil:#1fa36a;--koyu:#0f8a57;--lac:#10202e;--mavi:#16507e;--sari:#ffcf33;--zemin:#eef2f5;--gri:#5b6b7a}
+body{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;margin:0;padding:0;overflow-x:hidden;background:var(--zemin);color:var(--lac);font-size:18px}
+.ust{background:linear-gradient(135deg,#0f8a57 0%,#1fa36a 45%,#16507e 100%);color:#fff;padding:22px 18px 52px;position:relative;overflow:hidden}
+.ust::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-24px;height:48px;background:var(--zemin);border-radius:50% 50% 0 0}
+.ust .ust1{display:flex;align-items:center;justify-content:space-between}
+.ust .ik{width:52px;height:52px;border-radius:15px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center}
+.ust .kod{background:var(--sari);color:var(--lac);font-weight:900;font-size:15px;padding:6px 11px;border-radius:9px;letter-spacing:.5px}
+.ust h1{font-size:34px;line-height:1;margin:16px 0 0;font-weight:900;letter-spacing:-.5px}
+.ust p{margin:8px 0 0;font-size:16px;font-weight:600;opacity:.93}
+.ic{padding:0 14px 24px;position:relative;z-index:1}
+.secim{background:#fff;border-radius:18px;padding:14px;box-shadow:0 2px 10px rgba(16,32,46,.08)}
+.secim small{display:block;font-size:12px;letter-spacing:2px;color:var(--yesil);font-weight:800;margin:0 2px 8px}
+select,button{font-family:inherit;font-size:19px;padding:14px;border-radius:12px;width:100%;box-sizing:border-box}
+select{border:1.5px solid #d5dde5;background:#fff;color:var(--lac);font-weight:700;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%231fa36a' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+select:focus{outline:none;border-color:var(--yesil);box-shadow:0 0 0 3px rgba(31,163,106,.18)}
+button{border:0;background:var(--lac);color:#fff;font-weight:800;margin-top:10px}
+.kart{background:#fff;border-radius:18px;padding:14px 16px;margin:14px 0;box-shadow:0 2px 10px rgba(16,32,46,.08)}
+.hat{display:inline-block;font-size:14px;font-weight:800;padding:5px 12px;border-radius:20px;background:#e6effb;color:#1e63b8;margin-bottom:6px}
+
+.sat{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #edf0f3}
+.hat+.sat{border-top:0}
+.plk{font-size:24px;font-weight:900}
+.dk{font-size:34px;font-weight:900;color:var(--yesil);min-width:110px;text-align:right;letter-spacing:-.5px}
+.dk.yakin{color:#e67e22}
+.dk.durakta{color:#0f8a57}
+.kucuk{font-size:14px;color:var(--gri);margin-top:2px}
+.canli{display:inline-block;background:#e74c3c;color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;padding:3px 8px;border-radius:10px;margin-left:8px;vertical-align:middle;animation:nabiz 1.6s infinite}
+@keyframes nabiz{50%{opacity:.55}}
+#harita{height:260px;border-radius:18px;margin-top:14px;box-shadow:0 2px 10px rgba(16,32,46,.08)}
+.bilgi{text-align:center;color:var(--gri);font-size:15px;margin:14px 6px}
+.alt{background:var(--lac);color:#fff;text-align:center;padding:16px;font-size:14px;font-weight:600}
+.alt b{background:var(--sari);color:var(--lac);padding:3px 9px;border-radius:7px;margin-left:6px;font-weight:900}
+@media print{button{display:none}}
+</style>
+</head>
+<body>
+<div id="ana">
+<div class="ust"><div class="ust1"><div class="ik" style="background:none"><img src="sofor-ikon.svg" width="56" height="56" style="display:block;filter:drop-shadow(0 4px 10px rgba(0,0,0,.2))" onerror="this.remove()"></div><div class="kod" id="ustKod"></div></div><h1>Minibüs nerede?</h1><p id="ustAd">Kaç dakikada geleceğini hemen gör.</p></div>
+<div class="ic">
+<div class="secim"><small>DURAĞINI SEÇ</small><select id="durak" onchange="durakSec(this.value)"></select>
+<button onclick="konumBul()">📍 En yakın durağı bul</button></div>
+<div id="liste"><p class="bilgi">Yükleniyor...</p></div>
+<div id="harita"></div>
+<p class="bilgi">Süreler, minibüslerin gerçek yol sürelerinden öğrenilir; yeterli bilgi yoksa sefer planına göre hesaplanır. <span class="canli">CANLI</span> yazanlarda minibüsün gerçek konumu kullanılır.</p>
+</div>
+<div class="alt">Ücretsiz · Uygulama indirmeye gerek yok <b id="altKod"></b><div style="margin-top:10px;font-size:13px;font-weight:600;opacity:.75">Seyithan Niksarlı tarafından geliştirildi</div></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="config.js"></script>
+<script>
+// yolcu.html?d=DURAKKODU  (durak koduna göre o durağın ayarlarını, bugünkü planını ve canlı konumları okur)
+const q=new URLSearchParams(location.search);
+const DURAK=(q.get('d')||'').toUpperCase();
+let A=null,KONUM={},PLAN={},CANLI={},SURE={},SON_H=null,secili=q.get('durak')||'',HAR=null,IM=[],planVar=false,qrHazir=false;
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function bugun(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function simdiSn(){const n=new Date();return n.getHours()*3600+n.getMinutes()*60+n.getSeconds()}
+function saat(x){x=Math.round(x);return String(Math.floor(x/3600)%24).padStart(2,'0')+':'+String(Math.floor(x%3600/60)).padStart(2,'0')}
+function mesafe(a,b){const R=6371e3,r=Math.PI/180,dl=(b[0]-a[0])*r,dn=(b[1]-a[1])*r;const x=Math.sin(dl/2)**2+Math.cos(a[0]*r)*Math.cos(b[0]*r)*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(x))}
+function acik(r){r=r||'#1e63b8';const n=parseInt(r.slice(1),16);if(isNaN(n))return '#e6effb';const c=[n>>16,n>>8&255,n&255].map(v=>Math.round(v+(255-v)*.88));return 'rgb('+c.join(',')+')'}
+// yolcu durakları: ayarda ayrıca yazılmadıysa şoför durakları (kalkış dahil)
+function yDuraklar(h){if(h.yolcuDuraklari&&h.yolcuDuraklari.length)return h.yolcuDuraklari;const L=[];if(h.kalkis)L.push({ad:h.kalkis,dk:0,yon:'g'});(h.duraklar||[]).forEach(d=>{if(!L.some(x=>x.ad==d.ad))L.push({ad:d.ad,dk:+d.dk||0,yon:'g'})});return L}
+const yonAd=(h,y)=>((h.yonler||{})[y])||(y=='g'?'Gidiş':'Dönüş');
+const tumDuraklar=()=>{const L=[];for(const h of A.hatlar)yDuraklar(h).forEach(x=>{if(!L.includes(x.ad))L.push(x.ad)});return L};
+
+function hata(m){document.getElementById('liste').innerHTML='<p class="bilgi">'+(m||'Bağlanılamadı. İnternet bağlantını kontrol et.')+'</p>'}
+let db=null;
+(function(){
+ if(!DURAK){hata('Durak kodu eksik. Bağlantının sonunda ?d=DURAKKODU olmalı.');return}
+ document.getElementById('ustKod').textContent=DURAK;document.getElementById('altKod').textContent=DURAK;
+ try{firebase.initializeApp(window.FIREBASE_AYAR);db=firebase.firestore()}catch(e){hata();return}
+ const yol='duraklar/'+DURAK;
+ db.doc(yol).onSnapshot(d=>{const x=d.data();if(!x){hata(DURAK+' diye bir durak bulunamadı.');return}A=x.ayar;KONUM=x.konumlar||{};
+  document.getElementById('ustAd').textContent=(x.ad||DURAK)+' · kaç dakikada geleceğini hemen gör.';
+  if(q.has('qr')){if(!document.getElementById('qrlar'))qrSayfa();else if(qrHazir)qrCiz()}else{secenek();ciz(1);haritaCiz()}},()=>hata());
+ if(q.has('qr'))return;
+ db.doc(yol+'/plan/'+bugun()).onSnapshot(d=>{const x=d.data()||{};PLAN={};planVar=false;for(const k in x){if(k=='z')continue;try{PLAN[k]=JSON.parse(x[k]);planVar=true}catch(e){}}ciz(1)},()=>hata());
+ db.collection(yol+'/canli').onSnapshot(sn=>{CANLI={};sn.forEach(d=>{CANLI[d.id]=d.data()});ciz(1)},()=>{});
+ sureOku();setInterval(sureOku,300000);
+ setInterval(ciz,1000);
+})();
+function secenek(){const s=document.getElementById('durak');let o='<option value="">Durağını seç</option>';
+ for(const h of A.hatlar){const g=[];yDuraklar(h).forEach(x=>{if(!g.includes(x.ad))g.push(x.ad)});o+='<optgroup label="'+esc(h.ad)+'">'+g.map(n=>'<option value="'+esc(n)+'"'+(n==secili?' selected':'')+'>'+esc(n)+'</option>').join('')+'</optgroup>'}s.innerHTML=o}
+function durakSec(v){secili=v;try{history.replaceState(null,'','?d='+encodeURIComponent(DURAK)+'&durak='+encodeURIComponent(v))}catch(e){}ciz(1);haritaCiz()}
+function konumBul(){
+ if(!navigator.geolocation){alert('Telefonun konum vermiyor');return}
+ navigator.geolocation.getCurrentPosition(p=>{
+  const ben=[p.coords.latitude,p.coords.longitude];let en=null,em=1e12;
+  for(const n of tumDuraklar()){const k=KONUM[n];if(!k)continue;const m=mesafe(ben,k);if(m<em){em=m;en=n}}
+  if(!en){alert('Durak konumları henüz işaretlenmemiş. Durağı listeden seç.');return}
+  document.getElementById('durak').value=en;durakSec(en);
+  if(em>1500)alert('En yakın durak '+en+', yaklaşık '+(em/1000).toFixed(1)+' km uzakta.');
+ },()=>alert('Konum izni verilmedi. Durağı listeden seçebilirsin.'),{enableHighAccuracy:true,timeout:15000});
+}
+// --- öğrenilmiş süreler: durağın bütün şoförlerinin gerçek durak-arası süreleri (duraklar/{durak}/ogren/{hat}); yetersizse plan
+function sureOku(){try{if(!db)return;db.collection('duraklar/'+DURAK+'/ogren').get().then(sn=>{const t={};sn.forEach(d=>{const x=d.data();t[d.id]=(x&&x.s&&typeof x.s==='object')?x.s:{}});SURE=t;ciz(1)}).catch(()=>{})}catch(e){}}
+function sOrt(a){a=a.slice().sort((x,y)=>x-y);const n=a.length;return n%2?a[(n-1)/2]:(a[n/2-1]+a[n/2])/2}
+function sId(a,b){return (a+'__'+b).replace(/[\/.]/g,'-')}
+function sGrup(ms){const d=new Date(ms).getDay();return d===0||d===6?'hs':'hi'}
+function sMed(hat,id,g,pl){const o=(((SURE[hat]||{})[id])||[]).filter(x=>x&&x.g===g&&x.s>0).map(x=>x.s);if(o.length<5)return null;const m0=sOrt(o),L=o.filter(x=>x>=m0*0.5&&x<=m0*2);if(L.length<4)return null;const m=sOrt(L);if(pl>0&&(m<pl*0.6||m>pl*1.8))return null;return m}
+// plan durak listesi D=[[ad,dk]] -> öğrenilmiş kümülatif dakikalarla aynı biçimde liste (hiç öğrenilmiş segment yoksa D aynen)
+function sKum(h,D){try{if(!SURE[h.id])return D;const g=sGrup(Date.now()),S=[h.kalkis||'Kalkış'].concat(D.map(x=>x[0])),P=[0].concat(D.map(x=>+x[1]||0));let c=0,u=false;const R=[];
+ for(let i=1;i<S.length;i++){const pl=(P[i]-P[i-1])*60,m=sMed(h.id,sId(S[i-1],S[i]),g,pl);if(m!==null)u=true;c+=m!==null?m:pl;R.push([D[i-1][0],c/60])}return u?R:D}catch(e){return D}}
+function canliBilgi(plk,dep){const c=CANLI[plk];if(!c||Date.now()-c.z>120000||c.dep!==dep)return null;return c}
+// plan durakları arasında yolcu durağının dakikasını orantıla (uzatmalar plana yansır)
+function varis(h,s,D,n){
+ const taban={};(h.duraklar||[]).forEach(d=>taban[d.ad]=+d.dk||0);
+ const P=[[0,0]];for(const [ad,dk] of D){if(taban[ad]!==undefined)P.push([taban[ad],dk])}
+ P.sort((a,b)=>a[0]-b[0]);let p=P[0],r=null;for(const a of P){if(a[0]<=n)p=a;else{r=a;break}}
+ const dk=r?p[1]+(n-p[0])/(r[0]-p[0]||1)*(r[1]-p[1]):p[1]+(n-p[0]);return s+dk*60;
+}
+function gelenler(h,yon){
+ const n=simdiSn(),L=[],E=yDuraklar(h).filter(x=>x.ad==secili&&x.yon==yon);if(!E.length)return [];
+ for(const [s,p,D] of PLAN[h.id]||[]){const DK=sKum(h,D);for(const e of E){let t=varis(h,s,DK,e.dk);const c=canliBilgi(p,s);if(c&&c.gec!=null&&e.dk>0)t+=Math.max(-60,c.gec);
+  // varış dakikası bitene dek (hh:mm:59) satırda kalır, sonraki dakika başlayınca kalkar
+  if(n>=(Math.floor(t/60)+1)*60)continue;L.push({t,p,c:!!c,yolda:n>=s})}}
+ return L.sort((a,b)=>a.t-b.t).slice(0,3);
+}
+function ciz(z){
+ const el=document.getElementById('liste');if(!el||!A)return;
+ if(!secili){el.innerHTML='<p class="bilgi">Bulunduğun durağı seç ya da "En yakın durağı bul" tuşuna bas.</p>';SON_H=null;return}
+ if(!planVar){el.innerHTML='<p class="bilgi">Bugünün sefer listesi henüz girilmedi.</p>';SON_H=null;return}
+ const n=simdiSn();let h='',var_=false;
+ for(const hat of A.hatlar)for(const yon of ['g','d']){const L=gelenler(hat,yon);if(!L.length)continue;var_=true;
+  h+='<div class="kart"><div class="hat" style="background:'+acik(hat.renk)+';color:'+esc(hat.renk||'#1e63b8')+'">● '+esc(hat.ad)+' · '+esc(yonAd(hat,yon))+'</div>';
+  for(const x of L){const d=x.t-n,k=d>120?Math.ceil(d/60):0;
+   h+='<div class="sat"><div><span class="plk">'+esc(x.p)+'</span>'+(x.c?'<span class="canli">CANLI</span>':'')+'<div class="kucuk">'+(x.yolda?'Yolda':'Henüz kalkmadı')+' · '+saat(x.t)+'</div></div><div class="dk'+(k<=3?' yakin':'')+(d<=120?' durakta':'')+'">'+(d>120?k+' dk':d>0?'Geliyor / Durakta':'Durakta')+'</div></div>'}
+  h+='</div>'}
+ const son=var_?h:'<p class="bilgi">Bu durağa bugün başka minibüs gelmiyor.</p>';
+ if(z||son!==SON_H){SON_H=son;el.innerHTML=son;haritaCanli()}
+}
+function haritaCiz(){
+ const el=document.getElementById('harita');if(!el||!window.L||!A)return;
+ if(!HAR){const ilk=Object.values(KONUM)[0];HAR=L.map(el).setView(ilk||[41.02,28.59],ilk?14:12);const k1=L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{maxZoom:19,subdomains:'abc',attribution:'© OpenStreetMap'}),k2=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'© Esri'});k1.addTo(HAR);let hs=0;k1.on('tileerror',()=>{if(++hs==3){HAR.removeLayer(k1);k2.addTo(HAR)}});L.control.layers({'Harita':k1,'Harita 2':k2}).addTo(HAR)}
+ if(secili&&KONUM[secili])HAR.setView(KONUM[secili],15);haritaCanli();
+}
+function haritaCanli(){
+ if(!HAR)return;IM.forEach(m=>m.remove());IM=[];
+ if(secili&&KONUM[secili])IM.push(L.circleMarker(KONUM[secili],{radius:10,color:'#2f6fd6',fillOpacity:.8}).addTo(HAR).bindTooltip(secili,{permanent:true,direction:'top'}));
+ for(const p in CANLI){const c=CANLI[p];if(Date.now()-c.z>120000||c.lat==null)continue;
+  IM.push(L.marker([c.lat,c.lng],{icon:L.divIcon({html:'<div style="background:#e74c3c;color:#fff;font-weight:bold;border-radius:10px;padding:3px 7px;font-size:14px;white-space:nowrap">🚐 '+esc(p)+'</div>',className:'',iconAnchor:[30,12]})}).addTo(HAR))}
+}
+function qrSayfa(){
+ const KOD=DURAK;
+ const st=document.createElement('style');st.textContent=`
+ body.qrmod{background:#e9edf1;padding:0}
+ .arac{position:sticky;top:0;z-index:5;background:#14202b;color:#fff;padding:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+ .arac select,.arac button{width:auto;font-size:16px;padding:10px 14px;margin:0;border-radius:10px}
+ .arac span{font-size:14px;opacity:.8}
+ #qrlar{display:flex;flex-direction:column;align-items:center;gap:20px;padding:20px 0}
+ .afis{width:210mm;height:297mm;background:#fff;position:relative;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:#10202e;-webkit-print-color-adjust:exact;print-color-adjust:exact;box-shadow:0 4px 18px rgba(0,0,0,.15)}
+ .ust{background:linear-gradient(135deg,#0f8a57 0%,#1fa36a 45%,#16507e 100%);color:#fff;padding:12mm 14mm 22mm;position:relative}
+ .ust::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-14mm;height:28mm;background:#fff;border-radius:50% 50% 0 0}
+ .ust .ik{width:20mm;height:20mm;border-radius:6mm;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;margin-bottom:5mm}
+ .ust h1{font-size:16mm;line-height:1;margin:0;font-weight:900;letter-spacing:-.5mm;text-align:left}
+ .ust p{font-size:7.5mm;margin:4mm 0 0;opacity:.95;font-weight:600}
+ .durak{margin:-4mm 14mm 0;position:relative;z-index:2}
+ .durak small{display:block;font-size:4.5mm;letter-spacing:1.2mm;color:#1fa36a;font-weight:800}
+ .durak b{display:block;font-size:11mm;line-height:1.05;font-weight:900;margin-top:1.5mm}
+ .hatlar{display:flex;gap:3mm;flex-wrap:wrap;margin-top:4mm}
+ .hatlar i{font-style:normal;font-size:4.6mm;font-weight:800;padding:2mm 4.5mm;border-radius:20mm;background:#e6effb;color:#1e63b8}
+ .hatlar i.mur{background:#fdeceb;color:#d33b34}
+ .orta{flex:1;min-height:0;display:flex;align-items:center;gap:9mm;padding:8mm 14mm 4mm}
+ .qrk{background:#fff;border:2.2mm solid #10202e;border-radius:9mm;padding:6mm;flex-shrink:0;position:relative}
+ .qrk::before{content:"OKUT";position:absolute;top:-6.5mm;left:50%;transform:translateX(-50%);background:#ffcf33;color:#10202e;font-weight:900;font-size:5mm;letter-spacing:1mm;padding:1.5mm 5mm;border-radius:10mm}
+ .qrk img,.qrk canvas{width:72mm!important;height:72mm!important;display:block}
+ .adim{display:flex;flex-direction:column;gap:6mm}
+ .adim>div{display:flex;gap:4mm;align-items:flex-start}
+ .adim em{font-style:normal;flex-shrink:0;width:11mm;height:11mm;border-radius:50%;background:#1fa36a;color:#fff;font-weight:900;font-size:6mm;display:flex;align-items:center;justify-content:center}
+ .adim strong{display:block;font-size:6mm;line-height:1.15}
+ .adim span{display:block;font-size:4.3mm;color:#4d5d6b;margin-top:1mm;line-height:1.3}
+ .bant{margin:0 14mm 6mm;background:#f2f5f8;border-radius:6mm;padding:5mm 6mm;display:flex;gap:6mm;justify-content:space-around;text-align:center}
+ .bant div{font-size:4.2mm;color:#4d5d6b;font-weight:600}
+ .bant div b{display:block;font-size:6.5mm;color:#10202e;margin-bottom:1mm}
+ .alt{background:#10202e;color:#fff;padding:7mm 14mm;display:flex;align-items:center;justify-content:space-between}
+ .alt .not{font-size:7mm;font-weight:800;line-height:1.1;letter-spacing:.3mm}
+ .alt .kod{font-size:15mm;font-weight:900;letter-spacing:1mm;background:#ffcf33;color:#10202e;padding:1mm 7mm;border-radius:4mm}
+ @media screen and (max-width:900px){.afis{zoom:.45}}
+ @page{size:A4 portrait;margin:0}
+ @media print{body.qrmod{background:#fff}.arac{display:none}#qrlar{display:block;padding:0}.afis{box-shadow:none;page-break-after:always;break-after:page;zoom:1}}`;
+ document.head.appendChild(st);document.body.className='qrmod';
+ document.getElementById('ana').outerHTML='<div class="arac"><select id="qhat" onchange="qrCiz()"><option value="hepsi">Tüm duraklar</option>'+(A?A.hatlar.map(h=>'<option value="'+h.id+'">'+esc(h.ad)+' durakları</option>').join(''):'')+'</select><select id="qtek" onchange="qrCiz()"></select><button onclick="print()">🖨 Yazdır</button><span id="qsay"></span></div><div id="qrlar"></div>';
+ const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+ s.onload=()=>{window.QR_KOD=KOD;qrHazir=true;if(A)qrCiz()};document.head.appendChild(s);
+}
+function qrCiz(){
+ const h=document.getElementById('qhat').value,t=document.getElementById('qtek');
+ let L=[];for(const b of A.hatlar)if(h=='hepsi'||b.id==h)yDuraklar(b).forEach(x=>{if(!L.includes(x.ad))L.push(x.ad)});
+ const once=t.value;t.innerHTML='<option value="">Hepsini göster</option>'+L.map(n=>'<option'+(n==once?' selected':'')+'>'+n+'</option>').join('');
+ if(t.value)L=[t.value];
+ document.getElementById('qsay').textContent=L.length+' afiş';
+ const k=document.getElementById('qrlar'),u=location.origin+location.pathname+'?d='+encodeURIComponent(DURAK);k.innerHTML='';
+ const minibus='<svg viewBox="0 0 64 64" width="64" height="64" fill="none"><rect x="6" y="14" width="50" height="30" rx="7" fill="#fff"/><rect x="12" y="19" width="12" height="10" rx="2" fill="#1fa36a"/><rect x="27" y="19" width="12" height="10" rx="2" fill="#1fa36a"/><rect x="42" y="19" width="9" height="10" rx="2" fill="#1fa36a"/><circle cx="18" cy="46" r="6" fill="#10202e" stroke="#fff" stroke-width="3"/><circle cx="44" cy="46" r="6" fill="#10202e" stroke="#fff" stroke-width="3"/><path d="M56 30h3v8h-3" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>';
+ for(const n of L){
+  const hat=A.hatlar.filter(b=>yDuraklar(b).some(x=>x.ad==n));
+  const d=document.createElement('div');d.className='afis';
+  d.innerHTML='<div class="ust"><div class="ik">'+minibus+'</div><h1>Minibüs nerede?</h1><p>Kaç dakikada geleceğini telefonundan gör.</p></div>'+
+  '<div class="durak"><small>BULUNDUĞUNUZ DURAK</small><b>'+esc(n)+'</b><div class="hatlar">'+hat.map(b=>'<i style="background:'+acik(b.renk)+';color:'+esc(b.renk||'#1e63b8')+'">● '+esc(b.ad)+'</i>').join('')+'</div></div>'+
+  '<div class="orta"><div class="qrk"><div class="q"></div></div><div class="adim">'+
+  '<div><em>1</em><div><strong>Kamerayı aç</strong><span>Telefonunun kamerasını bu koda tut.</span></div></div>'+
+  '<div><em>2</em><div><strong>Bağlantıya dokun</strong><span>Durağın kendiliğinden açılır.</span></div></div>'+
+  '<div><em>3</em><div><strong>Bekleme süresini gör</strong><span>Gelen minibüs, plakası ve kaç dakika kaldığı ekranda.</span></div></div>'+
+  '</div></div>'+
+  '<div class="bant"><div><b>Ücretsiz</b>Uygulama indirmeye gerek yok</div><div><b>Canlı</b>Minibüsü haritada izle</div><div><b>Her iki yön</b>Tüm seferler tek ekranda</div></div>'+
+  '<div class="alt"><div class="not">Durak<br>kodu</div><div class="kod">'+esc(window.QR_KOD||'')+'</div></div>';
+  k.appendChild(d);
+  new QRCode(d.querySelector('.q'),{text:u+'&durak='+encodeURIComponent(n),width:600,height:600,correctLevel:QRCode.CorrectLevel.H});
+ }
+}
+</script>
+</body>
+</html>
